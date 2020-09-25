@@ -1,0 +1,23 @@
+[package]
+name = "m3u8_last_modified_proxy"
+version = "0.1.0"
+authors = ["David Holroyd <dave@badgers-in-foil.co.uk>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = "0.13.8"
+hyper-rustls = "0.21.0"
+futures = "0.3"
+unicase = "2.6"
+lazy_static = "1.4"
+tokio = { version = "0.2.22", features = [ "full" ] }
+hls_m3u8 = { git = "https://github.com/dholroyd/hls_m3u8.git", branch="parser-perf", features = [ "chrono" ] }
+chrono = "0.4.15"
+structopt = "0.3.18"
+log = "0.4.11"
+env_logger = "0.7.1"
+rustls = "0.18.1"
+tokio-rustls = "0.14.1"
+futures-util = "0.3.5"
